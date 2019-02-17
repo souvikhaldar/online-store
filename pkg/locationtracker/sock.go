@@ -32,7 +32,7 @@ func LongLatHandler(w http.ResponseWriter, r *http.Request) {
 	var coordinates longLatStruct
 	if err := json.NewDecoder(r.Body).Decode(&coordinates); err != nil {
 		log.Printf("ERROR: %s", err)
-		http.Error(w, "Bad request", http.StatusTeapot)
+		http.Error(w, "Bad request", 500)
 		return
 	}
 	defer r.Body.Close()
@@ -53,7 +53,6 @@ func WsHandler(w http.ResponseWriter, r *http.Request) {
 	clients[ws] = true
 }
 
-// 3
 func Echo() {
 	for {
 		val := <-broadcast
