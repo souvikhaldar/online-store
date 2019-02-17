@@ -20,7 +20,6 @@ var DBdriver *sql.DB
 
 func init() {
 	var er error
-	log.SetFlags(log.Lshortfile | log.LstdFlags)
 	connString := fmt.Sprintf("host=%s port=%d user=%s dbname=%s sslmode=disable", host, port, user, dbname)
 	DBdriver, er = sql.Open("postgres", connString)
 	if er != nil {

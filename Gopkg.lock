@@ -8,6 +8,12 @@
   version = "v1.7.0"
 
 [[projects]]
+  name = "github.com/gorilla/websocket"
+  packages = ["."]
+  revision = "66b9c49e59c6c48f0ffce28c2d8b8a5678502c6d"
+  version = "v1.4.0"
+
+[[projects]]
   name = "github.com/lib/pq"
   packages = [
     ".",
@@ -19,6 +25,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6039cffd139ee33b938f4c4184a57af1b42cb5638b39f0dcae535549271dd54f"
+  inputs-digest = "915cf8f794d84197e717ac76c05d9434c4a46bfdfafe3633cdf83b848c4fb7d0"
   solver-name = "gps-cdcl"
   solver-version = 1

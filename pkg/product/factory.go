@@ -10,7 +10,7 @@ import (
 	"github.com/souvikhaldar/online-store/pkg/db"
 )
 
-type pdt struct {
+type Product struct {
 	PID   int
 	Name  string
 	Type  string
@@ -24,7 +24,7 @@ func AddProduct(w http.ResponseWriter, r *http.Request) {
 		log.Print("Error in reading from request body", er)
 		return
 	}
-	var p pdt
+	var p Product
 	e := json.Unmarshal(body, &p)
 	if e != nil {
 		log.Print("Error in Unmarshalling request body", e)
