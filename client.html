@@ -9,9 +9,9 @@
       <script type="text/javascript">
          var long = document.getElementById("long");
          var lat = document.getElementById("lat");
-         
-         var exampleSocket = new WebSocket("ws://localhost:8192/ws?agent=2")
-         
+
+         var exampleSocket = new WebSocket("ws://34.220.237.190/ws?agent=2")
+
          var update = function(){
            exampleSocket.onmessage = function (event) {
              var longlatArr = event.data.split(" ");

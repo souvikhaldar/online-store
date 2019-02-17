@@ -22,5 +22,5 @@ func main() {
 		http.ServeFile(w, r, "../../client.html")
 	})
 	go locationtracker.Echo()
-	log.Fatal(http.ListenAndServe(":8192", router))
+	log.Fatal(http.ListenAndServe(":80", router))
 }

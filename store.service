@@ -1,0 +1,9 @@
+[Unit]
+Description = online-store http server
+
+[Service]
+ExecStart= sudo /home/ubuntu/online-store/cmd/server/server
+Restart = always
+
+[Install]
+WantedBy = multi-user.target
