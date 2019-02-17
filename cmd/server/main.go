@@ -16,7 +16,6 @@ func main() {
 	router.HandleFunc("/product", product.AddProduct).Methods("POST")
 	router.HandleFunc("/agent", agent.AddAgent).Methods("POST")
 	router.HandleFunc("/purchase", product.Purchase).Methods("GET")
-	//router.HandleFunc("/track", locationtracker.Track)
 	router.HandleFunc("/longlat", locationtracker.LongLatHandler).Methods("POST")
 	router.HandleFunc("/ws", locationtracker.WsHandler)
 	go locationtracker.Echo()
